@@ -2,7 +2,7 @@
 
 ### Usage:
 
-#### Method 1 (run it on your local machine in interactive mode3).
+#### Method 1 (run it on your local machine in interactive mode).
 `./aws-sso.py`
 
 #### Method 2 (run it on your local machine with optional arguments).
