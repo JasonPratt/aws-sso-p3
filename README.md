@@ -2,15 +2,11 @@
 
 ### Usage:
 
-#### Method 1 (standard).
-`docker run -it --rm -v ~/.aws:/root/.aws asuuto/aws-sso:latest`
+#### Method 1 (run it on your local machine in interactive mode3).
+`./aws-sso.py`
 
-(or `-v %userprofile%\.aws:/root/.aws` when running on Windows)
-
-#### Method 2 (using optional args).
-`docker run -it --rm -v ~/.aws:/root/.aws asuuto/aws-sso:latest <username> <password> <duration> <organization>`
-
-(or `-v %userprofile%\.aws:/root/.aws` when running on Windows)
+#### Method 2 (run it on your local machine with optional arguments).
+`./aws-sso.py <username> <password> <duration> <organization>`
 
 When using this method, all four of the following must be defined:
 
@@ -48,12 +44,6 @@ aws_secret_access_key =
 * Creates/updates a `saml` profile in `~/.aws/credentials`
 * Creates/updates `~/.aws/sso_session_cookies` to cache your ASU SSO and MFA sessions
 
-### Build:
-
-```
-docker build --pull -t asuuto/aws-sso:latest .
-docker push asuuto/aws-sso:latest
-```
 
 ### Known issues:
 - An error may be thrown if you have access to only one AWS account/role
